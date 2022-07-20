@@ -4,14 +4,23 @@ const container = $(".container");
 
 const now = moment();
 
-
-// Set current date.
 $("#currentDay").text(now.format("dddd MMMM DD, YYYY"));
 
-var currentHour = moment().hour();
-      
-        
- console.log(currentHour);
+// color code time blocks for past, present and future
 
-var currentTime = moment();
-        currentTime = currentTime.startOf("hour");
+function timeBlockColor() {
+        var hour = moment().hour();
+
+        $(".time-block").each(function() {
+                var currentTime = parseInt($(this).attr("id"));
+
+                if(currentTime  > hour){
+                        $(this).addClass("future").css("background-color", "green");
+                } else if(currentTime === hour) {
+                        $(this).addClass("present").css("background-color", "red");
+                } else {
+                        $(this).addClass("past").css("background-color","gray");
+                }                       
+               
+        })
+};

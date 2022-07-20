@@ -44,17 +44,17 @@ textarea {
 
 .past {
   background-color: #d3d3d3;
-  color: darkgray;
+  color: white;
 }
 
 .present {
   background-color: #ff6961;
-  color: red;
+  color: white;
 }
 
 .future {
   background-color: #77dd77;
-  color: green;
+  color: white;
 }
 
 .saveBtn {
@@ -77,5 +77,5 @@ textarea {
   align-items: flex-start;
 }
 .input-group .form-control {
-  background-color: darkgrey;
+  background-color: white;
 }
