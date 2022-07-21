@@ -10,31 +10,35 @@ $("#currentDay").text(now.format("dddd MMMM DD, YYYY"));
 
 function timeBlockColor() {
        
-        var timeNow = moment().hour();
+        var timeNow = moment().hours();
 
         $(".time-block").each(function() {
                 var blocktime = parseInt($(this).attr("id"));
 
                 if(blocktime > timeNow){
-                        $(this).addClass("future");
+                        // console.log('future');
+                        $('.time-block input').removeClass('past');
+                        $('.time-block input').removeClass('present');
+                        $('.time-block input').addClass("future");
                 } else if(blocktime === timeNow) {
-                        $(this).addClass("present");
+                        // console.log('present');
+                        $('.time-block input').removeClass('past');
+                        $('.time-block input').addClass("present");
                 } else {
-                        $(this).addClass("past");
-                }                       
-               
+                        // console.log('past');
+                        $('.time-block input').addClass("past");
+                }
         })
-}
+};
 
 // save event entries
 $(document).ready(function() {
         $(".btn").on("click", function() {
                 var text = $(this).siblings(".form").val();
-                var time = $(this).parent(attr("id"));
+                var time = $(this).parent().attr("id");
 
                 localStorage.setItem(time, text);
         })
-
         
 })
 

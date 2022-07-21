@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea {
+input {
   background: transparent;
   border: none;
   resize: none;
@@ -21,7 +21,7 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-.description {
+.form {
   white-space: pre-wrap;
 }
 
@@ -76,6 +76,6 @@ textarea {
   width: auto;
   align-items: flex-start;
 }
-.input-group .form-control {
-  background-color: white;
+.input-group {
+  background-color:white
 }
