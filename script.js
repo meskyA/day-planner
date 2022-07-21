@@ -39,20 +39,21 @@ $(document).ready(function() {
         $(".btn").on("click", function() {
                 var text = $(this).siblings(".form").val();
                 var time = $(this).parent().attr("id");
-
+                console.log('saving local storage', time, text)
                 localStorage.setItem(time, text);
+                console.log(localStorage.getItem(time))
         })
         
 })
 
-$("#hour9.form").val(localStorage.getItem("hour9"));
-$("#hour10.form").val(localStorage.getItem("hour10"));
-$("#hour11.form").val(localStorage.getItem("hour11"));
-$("#hour12.form").val(localStorage.getItem("hour12"));
-$("#hour13.form").val(localStorage.getItem("hour13"));
-$("#hour14.form").val(localStorage.getItem("hour14"));
-$("#hour15.form").val(localStorage.getItem("hour15"));
-$("#hour16.form").val(localStorage.getItem("hour16"));
-$("#hour17.form").val(localStorage.getItem("hour17"));
+$("#hour9 .form").val(localStorage.getItem("hour9"));
+$("#hour10 .form").val(localStorage.getItem("hour10"));
+$("#hour11 .form").val(localStorage.getItem("hour11"));
+$("#hour12 .form").val(localStorage.getItem("hour12"));
+$("#hour13 .form").val(localStorage.getItem("hour13"));
+$("#hour14 .form").val(localStorage.getItem("hour14"));
+$("#hour15 .form").val(localStorage.getItem("hour15"));
+$("#hour16 .form").val(localStorage.getItem("hour16"));
+$("#hour17 .form").val(localStorage.getItem("hour17"));
 
 timeBlockColor();
