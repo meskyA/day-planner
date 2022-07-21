@@ -13,20 +13,23 @@ function timeBlockColor() {
         var timeNow = moment().hours();
 
         $(".time-block").each(function() {
-                var blocktime = parseInt($(this).attr("id"));
+                var blockTime = parseInt($(this).attr("id").split("hour")[1]); 
 
-                if(blocktime > timeNow){
+                if(blockTime > timeNow){
                         // console.log('future');
-                        $('.time-block input').removeClass('past');
-                        $('.time-block input').removeClass('present');
-                        $('.time-block input').addClass("future");
-                } else if(blocktime === timeNow) {
+                        $(this).removeClass('future');
+                        $(this).removeClass('present');
+                        $(this).addClass("past");
+                } else if(blockTime === timeNow) {
                         // console.log('present');
-                        $('.time-block input').removeClass('past');
-                        $('.time-block input').addClass("present");
+                        $(this).removeClass('past');
+                        $(this).removeClass("future");
+                        $(this).removeClass('present');
+                
                 } else {
-                        // console.log('past');
-                        $('.time-block input').addClass("past");
+                        $(this).removeClass("present"); 
+                         $(this).removeClass("past"); 
+                        $(this).addClass("future");
                 }
         })
 };
