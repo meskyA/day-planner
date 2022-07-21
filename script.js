@@ -17,19 +17,19 @@ function timeBlockColor() {
 
                 if(blockTime > timeNow){
                         // console.log('future');
-                        $(this).removeClass('future');
+                        $(this).removeClass('past');
                         $(this).removeClass('present');
-                        $(this).addClass("past");
+                        $(this).addClass("future");
                 } else if(blockTime === timeNow) {
                         // console.log('present');
                         $(this).removeClass('past');
                         $(this).removeClass("future");
-                        $(this).removeClass('present');
+                        $(this).addClass('present');
                 
                 } else {
                         $(this).removeClass("present"); 
-                         $(this).removeClass("past"); 
-                        $(this).addClass("future");
+                         $(this).removeClass("future"); 
+                        $(this).addClass("past");
                 }
         })
 };
@@ -45,14 +45,14 @@ $(document).ready(function() {
         
 })
 
-$("#9 .form").val(localStorage.getItem("9"));
-$("10 .form").val(localStorage.getItem("10"));
-$("11 .form").val(localStorage.getItem("11"));
-$("12 .form").val(localStorage.getItem("12"));
-$("13 .form").val(localStorage.getItem("13"));
-$("#14 .form").val(localStorage.getItem("14"));
-$("#15 .form").val(localStorage.getItem("15"));
-$("#16 .form").val(localStorage.getItem("16"));
-$("#17 .form").val(localStorage.getItem("17"));
+$("#hour9.form").val(localStorage.getItem("hour9"));
+$("#hour10.form").val(localStorage.getItem("hour10"));
+$("#hour11.form").val(localStorage.getItem("hour11"));
+$("#hour12.form").val(localStorage.getItem("hour12"));
+$("#hour13.form").val(localStorage.getItem("hour13"));
+$("#hour14.form").val(localStorage.getItem("hour14"));
+$("#hour15.form").val(localStorage.getItem("hour15"));
+$("#hour16.form").val(localStorage.getItem("hour16"));
+$("#hour17.form").val(localStorage.getItem("hour17"));
 
 timeBlockColor();
