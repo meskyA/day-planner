@@ -8,6 +8,8 @@ When cliking a timeblock, an event can be entered.
 When the save button is clicked, the text for the event is saved in local storage.
 When the page is refreshed, the saved events persist.
 
-Screen Shot 2022-07-19 at 9.36.45 PM
+<!-- Screen shots and URLs -->
+/Users/meskeremassefa/Desktop/Screen Shot 2022-07-22 at 11.14.24 AM.png
+/Users/meskeremassefa/Desktop/Screen Shot 2022-07-22 at 11.14.34 AM.png
 https://github.com/meskyA/day-planner
- https://meskya.github.io/day-planner/
+https://meskya.github.io/day-planner/
