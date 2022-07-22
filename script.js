@@ -25,7 +25,7 @@ function timeBlockColor() {
                         $(this).removeClass('past');
                         $(this).removeClass("future");
                         $(this).addClass('present');
-                
+                        // console.log 'past'
                 } else {
                         $(this).removeClass("present"); 
                          $(this).removeClass("future"); 
